@@ -2,8 +2,11 @@
 body {
     width: max-content;
     margin: auto;
-    background-color: rgb(168, 161, 161);
+    background-color: #dcdfce;
     font-family: 'IBM Plex Sans', sans-serif;
+}
+#apolloparent{
+    padding:20px;
 }
 
 td {
