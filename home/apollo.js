@@ -1,7 +1,3 @@
-document.querySelector(".next").addEventListener("click", function() {
-
-})
-
 document.querySelector(".profile").addEventListener("click", function() {
     document.querySelector(".logincontainer").style.display = "flex";
 })

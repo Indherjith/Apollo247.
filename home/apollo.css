@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat:ital,wght@0,100;0,400;1,200&family=Poppins:wght@100;200;300&display=swap');
-body{
-    width:max-content;
+body {
+    width: max-content;
     margin: auto;
-    background-color:rgb(168, 161, 161);
+    background-color: rgb(168, 161, 161);
     font-family: 'IBM Plex Sans', sans-serif;
 }
-td{
+
+td {
     font-size: 12px;
     font-weight: 300;
-    color:#02475b
-   
+    color: #02475b
 }
-tr{
+
+tr {
     font-size: 13px;
     font-weight: 600;
     color: #01475b;
 }
-.notfooter{
+
+.notfooter {
     width: 1000px;
     background-color: white;
-
     width: 1000px;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
@@ -28,16 +29,14 @@ tr{
 
 .top {
     display: flex;
-    justify-content:space-evenly;
-    background-color:white;
+    justify-content: space-evenly;
+    background-color: white;
 }
-table{
 
-    margin-left:170px;
+table {
+    margin-left: 170px;
     width: 300px;
-    height:70px;
-
-
+    height: 70px;
     justify-content: space-evenly;
     background-color: white;
 }
@@ -45,17 +44,21 @@ table{
 table {
     margin-left: 170px;
 }
-.logo{
-    margin-right:70px;
-    margin-top:10px;
+
+.logo {
+    margin-right: 70px;
+    margin-top: 10px;
 }
-.cart{
-    margin-right:-90px;
+
+.cart {
+    margin-right: -90px;
 }
-.profile{
-    margin-right:-100px;
+
+.profile {
+    margin-right: -100px;
 }
-.logo{
+
+.logo {
     margin-left: -70px;
     margin-top: 10px;
 }
@@ -77,13 +80,15 @@ h1 {
     background-color: white;
     overflow: hidden;
 }
-.slider{
-    margin-top:40px;
+
+.slider {
+    margin-top: 40px;
     background-color: white;
-    width:900px;
-    height:160px;
-    overflow:scroll;
+    width: 900px;
+    height: 160px;
+    overflow: scroll;
 }
+
 button {
     width: 350px;
     height: 60px;
@@ -102,20 +107,21 @@ button {
     overflow-y: hidden;
     overflow-x: auto;
     white-space: nowrap;
-    margin-left:20px;
+    margin-left: 20px;
     border-radius: 5px;
 }
 
-button{
-    width:350px;
-    height:60px;
+button {
+    width: 350px;
+    height: 60px;
 }
 
-.hello .left .button{
-    display:inline;
-    width:160px;
-    height:60px;
+.hello .left .button {
+    display: inline;
+    width: 160px;
+    height: 60px;
 }
+
 #vaccinationquery {
     background-color: white;
     width: 910px;
@@ -125,7 +131,7 @@ button{
     border-radius: 10px;
     margin-left: 30px;
     margin-top: 40px;
-    margin-right: 
+    margin-right:
 }
 
 #vaccinationquery>h3 {
@@ -137,7 +143,6 @@ button{
     width: 20px;
     height: 20px;
     display: block;
-    
 }
 
 #subvaccinationquery {
@@ -168,16 +173,16 @@ button{
 }
 
 #discover {
-    width:950px;
+    width: 950px;
     height: 160px;
     display: block;
-    margin:10px 30px 50px 30px;
+    margin: 10px 30px 50px 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #health {
     background-image: url(https://newassets.apollo247.com/images/ecosystem-banner.jpg);
-    width:850px;
+    width: 850px;
     background-repeat: repeat-x;
     padding: 30px;
     margin: auto;
@@ -204,14 +209,15 @@ a {
     margin-top: 10px;
     font-size: 16px;
 }
-.a{
+
+.a {
     font-size: 12px;
     font-weight: 300;
-    color:#02475b;
+    color: #02475b;
 }
 
 .healthblog {
-    width:900px;
+    width: 900px;
     margin: auto;
 }
 
@@ -221,7 +227,7 @@ a {
 }
 
 .healthblog>div>div {
-    width:170px;
+    width: 170px;
     height: 45px;
     display: flex;
     justify-content: space-evenly;
@@ -236,51 +242,59 @@ a {
 
 .healthblog>div>p {
     color: #01475B99;
-} 
-.footer{
-    width: 1000px;
-    background-color: white;
-   
-    color: black; 
 }
 
-.foothead{
-    font-size: 14px; 
+.footer {
+    width: 1000px;
+    background-color: white;
+    color: black;
+}
+
+.foothead {
+    font-size: 14px;
     font-weight: 700;
     color: black;
 }
-.footer p{
+
+.footer p {
     color: rgb(138, 135, 135);
 }
+
 .footer2 {
     width: 1000px;
     background-color: rgb(0, 0, 0);
-    
 }
-.footer2head{
+
+.footer2head {
     color: #fc9916;
 }
-.footerlogo{
-    width:100px;
-    height:77px;
-    margin-left:400px;
+
+.footerlogo {
+    width: 100px;
+    height: 77px;
+    margin-left: 400px;
 }
+
 .shouldbeinline li {
     display: inline;
     color: white;
     margin-left: 10px;
-
 }
-span{
-    color:white;
+
+span {
+    color: white;
     width: 5px;
     height: 5px;
 }
+
 .slider .img {
     margin: 10px;
     margin-top: -10px;
-    
 }
+
+
+/* loginpage styles */
+
 .logincontainer {
     background-color: rgb(0, 0, 0, 0.1);
     width: 100%;
@@ -526,7 +540,26 @@ span{
     margin-top: 30px;
 }
 
+.call>img {
+    margin: 10x;
+}
+
 .get {
     text-decoration: none;
     color: #fff;
+    margin-bottom: 10px;
+}
+
+.profile {
+    cursor: pointer;
+}
+
+.missingp,
+.otpmsg {
+    color: gray;
+}
+
+.or {
+    color: black;
+    font-weight: 800;
 }

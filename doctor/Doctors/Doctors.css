@@ -72,12 +72,15 @@ body {
 
 .inner:first-child {
     background-color: #f7f8f5;
+    
     border-bottom: 5px solid #00b38e;
 }
 
 .inner>a:first-child {
     display: block;
     min-width: 50px;
+    text-decoration: none;
+    color: #02475b;
     font-size: 13px !important;
     font-weight: 600;
     line-height: 18px !important;
@@ -115,6 +118,8 @@ body {
 .second>a:first-child {
     display: block;
     min-width: 85px;
+    text-decoration: none;
+    color: #02475b;
     font-size: 13px !important;
     line-height: 18px !important;
     padding-bottom: 3px;
