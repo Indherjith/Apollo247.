@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pharmacy.css">
+    <title>View all</title>
+    <style>
+        #uploadViewall{
+                height: 35px;
+                width: 90px;
+                margin-top: 12px;
+                background-color: white;
+                border-radius: 5px;
+                border:1px solid rgb(252,183,22);
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+                color:rgb(252,183,22) ;
+                font-weight: 600;
+        }
+        #productsNameViewAll{
+            margin-top: 10px;
+            padding: 10px;
+        }
+        #viewAllContainer{
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+        #leftViewAllContainer{
+            width: 33%;
+           box-sizing: border-box;
+           
+           background-color: white;
+        }
+        #filterBy{
+            display: flex;
+            justify-content: space-between;
+            padding: 20PX;
+            font-weight: 400;
+        }
+        #catagory{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        #catagory>h3{
+            font-weight: 400;
+        }
+        #rightViewAllContainer{
+            width: 65%;
+           
+                  
+        }
+        #rightViewAllContainer>div>h3{
+           font-weight: 400;
+        }
+        #sortButton{
+            height: 25px;
+           border-radius: 5px;
+           border: 1px solid   #02475b;
+           background-color: none;
+        }
+        #sortButtonDiv{
+            text-align: right;
+        }
+        #productsContainerDiv{
+           
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            width: 100%;
+        }
+        #main1{
+           
+           text-align: center;
+            background-color: white;
+           box-sizing: border-box;
+           border-radius: 10px;
+           box-shadow: 0 2px 4px 0 hsl(0deg 0% 50% / 30%);
+       }
+    </style>
+   
+</head>
+<body>
+    <div id="parent" style="background-color: rgb(247,248,245);">
+                <!-- HEADER NAV -->
+
+        <div class="navheader">
+            <div class="body">
+                <div class="containerHeader">
+                    <div class="headers">
+                        <a href=""><img src="https://newassets.apollo247.com/images/ic_logo.png" id="img" alt="" title="Online Doctor Consultation & Medicines"></a>
+                    </div>
+                    <div class="headerlink">
+                        <div class="inner">
+                            <a>doctors</a>
+                            <a href="">Consult Online</a>
+                        </div>
+                        <div class="second">
+                            <a>pharmacy</a>
+                            <a href="" >Medicines & other products</a>
+                        </div>
+                        <div class="inner">
+                            <a>lab tests</a>
+                            <a href="" >Health check-ups</a>
+                        </div>
+                        <div class="inner">
+                            <a>covid-19</a>
+                            <a href="" >Latest updates</a>
+                        </div>
+                        <a href=""><img id="cartImage" src="https://www.vhv.rs/dpng/d/598-5987992_shopping-cart-chen-shopping-cart-with-circle-icon.png" class="cart" alt=""></a>
+                        <a href=""><img  id="loginImage"   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX///8hISEAAAAFBQWpqakeHh4bGxsYGBgODg4TExP4+Pjx8fEKCgqAgIAREREJCQmvr6+9vb16enqRkZHPz8/W1tZwcHDb29smJibr6+tra2s8PDybm5uEhITi4uJDQ0NbW1suLi7IyMhPT0+YmJi5ublBQUGioqJdXV1UVFQzMzNlZWU4zchdAAAJeElEQVR4nO2d12LqOhBF47HlbmNaKMYQ2iUJ//9/l5IeAlMk2znRespT5I3aaIp0d2exWCwWi8VisVgsFovFYrFYfhFxkswH3aLwdrudVxTdwTxJ4qY/ShOTUdHvPTxHcMJ1O657/jN6fuj1i9Gk6Q8UMfSmizFAGAVKOV9RKohCAGcx9Qa/sjuHs3UObuB/l/ZFqB+5EK5nw6Y/mETS7Y0hvSnuo8wUgl43afrDcSSrewcivLo3lRH4018gcpSNOfLeRI57rR6ucbGAnCvvRWQOZdHWhWcyc8AXyTvjg79p4x4yyZQr6753lBtk86YFfSGpwlCXvpPGMM3a1I9xBVr1nTVC1Zr5WCw7muWd6YyLpqWdGC5Ad/+9omAxaFrecYAGhvQdCSBreKh2DQ3Qd9Jlt0F9caZlA7yO32A3jkrTHXgmLRuy5GY1dOAZH2YN6IvvoSZ9R+C+9pE6X6Q1CjyM1P9qNuNWRveISwSwqlNgYWyT/xkFXn0C+3VOwXegX5fAXjMCDxJ79QisdRH9IvG+DoHT5gQeJE7/cYF1SGxwiNYjsbFF5oNEo8tNQ9vEZ0xuGkUbBB4kGnNurNoh8CDRkAE3l5pqQX4OHbq50KhVYMQMj/8TfVcA8FTtVoPRoLurnkBmuQcLE4epe8FxSeXw8CmslHT3oghHasC4mQkmYRRV3x3YSRVF/H+p/9Q/5AtUsL88beZ7wcyGkV6Bccn2yfjuz4v7tsP/t6XeqZixJ2HgX1v35mP2SE0znQK77DEaLa7HrZMFWyJodBXHS+5gCspbgfmk5O4b/lLfOGWPURXeDgLO2btGp9IlcMAeoyjzim8Mgi5f+II7jpCLAXuIBAs9AtknCjXGZcckY+441XPKiPnt75BN7Ni/oZbFpuIGmPDNx0v2YqPhNJyw14EQ33o/5DYC8jSxit843nIc8X9G8Y4xSdlJamNCM+y5rlJp2k3G7sKcYjdmObeZUGieTi4k9yKBLaEdvo9LKVknblxuyw5QUmH4ZpPjis7CsSM4olJWOf6KffhCyZ4ocZACqSVJQxLDhn+yPywBpJYEbi6/5Avkb1NOjX0ocdnw1/Bju5TpEUsUkvalT/Bt/pNCil96LlGIPcN8h++dOSmkuFFqbOoj9wKP7cHsx56djuxE+UcR0wOeCDbDA8Ga0NZalCKnHN4wlY2cg7GBX2pEC43DHqY90SAlGaZboULmakqozLpI8IRu6kkaUFQcgYJYzAsu1tk34Nv3L7D8ijNxemWETQzZC+eD46ScA4ZseTuBjLdryA/wKQv3KxqqYNQYs5zy3ZUfWqLZ+Sfk0/BAjhmnU4n1+wpjInri2X9qeHOzIUn4/B2Xnl47Fc/+EzcTez09STroVe2dhaZSgxspBXp68LDUkIM0Ew3T/8zVkpdMV5qVGlNdbqLj/WfSxU+rwEhjSQP5oK8zSc+H3qUfeNLTWXRD9kfxYyWXyCH72o/DrKNjl3iDEAc6Iz1YfCWHRbV69WvMV9VaWtb+lYiaWPugvSbGDyF3yvXTujzIDbUXhQWPNIHxs5GiGOX7gS89lf3wr4k5Ugn75oemUBHNkyGIIzQFMRos8l82AzFvWBDtagpSNE/uZ2sAor+tJXUHFEgx59+pkGa26Tn/1grxDLxjK1RBnrpc0jxg78MuJU5yUMhL9VKh6zxVM4/LrHpyXKZFR4oEMftQwXNfnvE57D+zUviJfciZh7ny9KQlx96YcbAizkPGWgpTfXetJYxKVeJaSleITibFQU85Je6HZJtGe00g+Tcm2jRUu1RzDx6h9iLRLiWeLXITdfL3tOWGeLagnQ/56R5Xv4HmsiWeD2lnfEN3cpAc/tQzPslPwwltoaAE+Kh+GpKvjeyqxEJx2lJ9bSR/qe5ixzcooQWyv5Tw8+kp67gEJTpMHkiEDTfYG5F3ZI+fK2STgzBAcm1Fct+o8FsieaoQ4ofGFhrKXKHHDwkxYFYuCw58Tg89BkyI46e3sxG4bNAKGXF8/Bm4FaOUkYuBz6dpxUrDSWxDm0zkvRYP2u5QOeO/o/Paggfdwt5AZ2WSEpJfQa9jBm0adG0paz3HT0QNdZyXwZ9SeaYxujCP6D/Ag/alKIf1/9HTnOhtxoP2vDPzvNH+NvLRDMsjdqFh5urj6y1oRVx48IOUuRKga2YM3S6Gzo7m1szghym/eOwq6NI5dt0T2p1nZkdE74YCZ6b5H/EadQwh9EGfUB6DB22ySTxh6DpgA5s+eruX1AHj/VEGrG98F0rCXvh6fO0bBnqrkNXj382wJ31/qUvaC+hjhexOBcK9GDruwvlAH2uSSu/FwN9tolKdj1AM0JfGSO82uZugnRn+Ut8xMX7GLuKYG+FugL9jKH/QoO3MA9oDJb9jiBINBl1Ot4rQpoaBQ7jrC1GphmGDF+jqWN8oV41puWqbcGm4JpOfktmiYaAShqi2LB7KvYkwlf2qMSXfi+UlvQSpYDYsJTHveUmpt9J29yXtYkFfkB/lkarZ9N1fSr2DFh553Th6JOUp6byDlprIF+WMxxnjKqfVy+k9zhAvUVVhuCGmKG2oz3zqvQuafp+36uQVPpVuXoXUZ1p13+fNqAtWYedxi+nIZPvo0i9w0J+mxCkrD8DZF9dt/0mxdzjvJBhIaOW9jaACAKfnDePvQyqOh15PAbAqLEy8jXAXc6+EVpELUO6zvrddDYej4XC19frZvgRwuXWcZt63kL1R4gd5eH6h5PRKSZgHgkpg5Rp6KvCff2emNRVt5t4K+gPvPWm8qUMg0PATgc2/u2b8gcCGJdbxPGCjEusQ+AfesPwD75D+gbdkm3oP2OBG/52V+4+/6fwH3uX+A2+r3x1P/dqvQvoBiQtWxKjkPkFDIxW50UXEVQ3d6F+9tM84q6XpbkyXJjLKCBy60eS+ETTbgWeGa2Pbv4K1zgQPPsXSzG02nWWtVsw14j5ouHX4MyoERnjHHEmVa9WowrQyVcXBZZI51ODKz/pcPxMnAhlgMnO0bI8+OJs26jsSFwvppZ0qh7Jo0/z7xigbA/tWSRXBuNeO/eEayarncHryIE/dd9u2vPxA0j30ZIdwT6kKUgh6v0XeC6PdOgc3uilT+ZEL4XrW/sF5iaE3XSwBwii4kGqsVBCFAOPF1Bu0emm5RTIq+r3HMnoJHLod9yWMGJWPvX4xauu+QCVOkvmguy283W7nFdvuYJ4kv7rjLBaLxWKxWCwWi8VisVgslr/H/wryp59Fi/LlAAAAAElFTkSuQmCC" class="login" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+
+
+    <!-- small navbaar -->
+    <div id="innerparent1">
+                <div id="navContainer">
+                    <ul>
+                        <li>Covid Essentials</li>
+                        <li>Health Condtion</li>
+                        <li>Ayurveda</li>
+                        <li>Health Devices</li>
+                        <li>Baby Care</li>
+                        <li>Personal Care</li>
+                        <li>Home Essentials</li>
+                        <li>Health & Nutrition</li>
+                        <li>Apollo Life</li>
+                    </ul>
+
+                </div>
+    </div>
+        <!-- search parent -->
+        <div id="searchParent">
+            <div id="serachInput"><input type="text" placeholder="Search meds, brands and more" id="input">
+                <div><a href=""><i  id="searchIcon" class="fa-solid fa-greater-than"></i></a></div>
+            </div>
+            <div id="specialOffer">
+                <button id="uploadViewall">UPLOAD</button>
+                <div><img id="offerIcon"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiTTXtJpkUc8wlk1xOcJZQ8N6WmRkCyPF-Q&usqp=CAU" alt=""></div>
+                <div><h3>Special offers</h3></div>
+               
+            </div>
+        </div>
+
+        <div id="productsNameViewAll">
+            Home > Apollo247 > POST COVID ESSENTIALS
+        </div>
+       <div id="viewAllContainer">
+        <div id="leftViewAllContainer">
+            <div id="filterBy">
+                    <div><h3>Filter By</h3></div>
+                    <div><h3>CLEAR ALL</h3></div>
+            </div>
+            <hr>
+            <div   id="catagory"><h3>CATAGORY</h3><h3>+</h3></div>
+            <hr>
+            <div   id="catagory"><h3>BRAND</h3><h3>+</h3></div>
+        </div>
+        <div id="rightViewAllContainer">
+            <div><h3>POST COVID ESSENTIALS | 43 Products</h3></div>
+            <hr>
+            <div id="sortButtonDiv" ><h4><button id="sortButton">SORT BY RECOMENDED ^</button></h4></div>
+            <div id="productsContainerDiv"></div>
+        </div>
+       </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+var postCovidEssentialsData=[
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/c/_/c.jpg",
+                    name:"Zincovi Tablet 15s",
+                    mrp:"MRP  Rs.",
+                    stickedOff:106,
+                    cost:"RS.",
+                    rs:110,
+                    discount:"₹ 6 discount back",
+                    addcart:"ADD TO CART",
+                    productNo:1,
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/m/img_20210108_163844__front__biotin_tablets_60_s.jpg",
+                    name:"Apollo Life Biotin 5000 mcg, 60 Tablets",
+                    productNo:2,
+                    mrp:"MRP  Rs.",
+                    stickedOff:523,
+                    cost:"RS.",
+                    rs:475,
+                    discount:"₹ 48 extra cashback",
+                    addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/h/o/hor0160_1_2.jpg",
+                    name:"Horlicks Protein+ Vanilla Flavoured Health and...",
+                    productNo:3,
+                    mrp:"MRP  Rs.",
+                    stickedOff:519,
+                    cost:"RS.",
+                    rs:490,
+                    discount:"₹ 29 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/l/i/lim0003.jpg",
+                    name:"Limcee Vitamin C 500 mg Orange Flavour....",
+                    productNo:4,
+                    mrp:"MRP  Rs.",
+                    stickedOff:21.09,
+                    cost:"RS.",
+                    rs:20.09,
+                    discount:"₹ 1 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/a/c/acc0005_3.jpg",
+                    name:"Accu-Chek Active Blood Glucose Monitoring...",
+                    productNo:13,
+                    mrp:"MRP  Rs.",
+                    stickedOff:1356,
+                    cost:"RS.",
+                    rs:1279,              
+                    discount:"₹ 77 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/b/p/bpm0063_1_1.jpg",
+                    name:"Omron Blood Pressure Monitor HEM-7121J...",
+                    productNo:14,
+                    mrp:"MRP  Rs.",
+                    stickedOff:1988,
+                    cost:"RS.",
+                    rs:1875,             
+                    discount:"₹ 113 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/o/n/one0174_-_sps_amazon_imgs1.jpg",
+                    name:"OneTouch Select Plus Simple Glucometer ...",
+                    productNo:15,
+                    mrp:"MRP  Rs.",
+                    stickedOff:928,
+                    cost:"RS.",
+                    rs:875,             
+                    discount:"₹ 53 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/a/c/acc0008.jpg",
+                    name:"Accu-Chek Active Test Strips, 50 Count",
+                    productNo:16,
+                    mrp:"MRP  Rs.",
+                    stickedOff:868,
+                    cost:"RS.",
+                    rs:819,             
+                    discount:"₹ 49 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/m/img_20210116_122912__front__digital_thermometer_flexible.jpg",
+                    name:"Apollo Pharmacy Digital Flexible Thermometer",
+                    productNo:17,
+                    mrp:"MRP  Rs.",
+                    stickedOff:90,
+                    cost:"RS.",
+                    rs:100,              
+                    discount:"₹ 10 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/m/img_20210115_170438__front__pulse_oximeter.jpg",
+                    name:"Apollo Pharmacy Pulse Oximeter ZM-700-01",
+                    productNo:18, 
+                    mrp:"MRP  Rs.",
+                    stickedOff:825,
+                    cost:"RS.",
+                    rs:750,             
+                    discount:"₹ 75 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/h/e/hea0485_1_.jpg",
+                    name:"Healthvit Melatonin 10 mg, 60 Tablets",
+                    productNo:5,
+                    mrp:"MRP  Rs.",
+                    stickedOff:382,
+                    cost:"RS.",
+                    rs:360,
+                    discount:"₹ 22 extra cashback",
+                addcart:"ADD TO CART"
+                },
+               
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/e/m/ema0083_1.jpg",
+                    name:"Fair &amp; Handsome Instant Radiance Face..",
+                    productNo:26,
+                    mrp:"MRP  Rs.",
+                    stickedOff:90,
+                    cost:"RS.",
+                    rs:85,              
+                    discount:"₹ 5 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/n/inl0099-1.jpg",
+                    name:"Inlife Chocolate Flavored Sugar Free...",
+                    productNo:27,
+                    mrp:"MRP  Rs.",
+                    stickedOff:755,
+                    cost:"RS.",
+                    rs:712,              
+                    discount:"₹ 43 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/3/j/3j1a9854.jpg",
+                    name:"dr Organic Aloe Vera Skin Lotion, 200 ml",
+                    productNo:28,
+                    mrp:"MRP  Rs.",
+                    stickedOff:428.5,
+                    cost:"RS.",
+                    rs:404.5,              
+                    discount:"₹ 24 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/1/2/12757_h-8901030722202.jpg",
+                    name:"Ponds Men Energy Bright Facewash, 100 gm",
+                    productNo:7,
+                    mrp:"MRP  Rs.",
+                    stickedOff:152.5,
+                    cost:"RS.",
+                    rs:143.5,
+                    discount:"₹ 9 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/c/e/cet0236.jpg",
+                    name:"Cetaphil Restoraderm Moisturising Lotion...",
+                    productNo:8,
+                    mrp:"MRP  Rs.",
+                    stickedOff:2078,
+                    cost:"RS.",
+                    rs:1960,            
+                    discount:"₹ 118 extra cashback",
+                     addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/l/a/las0139.jpg",
+                    name:"La Shield Sunscreen Gel SPF 50 PA+++ UVA..",
+                    productNo:9,
+                    mrp:"MRP  Rs.",
+                    stickedOff:237,
+                    cost:"RS.",
+                    rs:224,             
+                    discount:"₹ 13 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0040_2.jpg",
+                    name:"Sebamed Clear Face Cleansing Foam, 150 ml",
+                    productNo:10,
+                    mrp:"MRP  Rs.",
+                    stickedOff:615,
+                    cost:"RS.",
+                    rs:580,             
+                    discount:"₹ 35 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/a/h/aha0006.jpg",
+                    name:"Ahaglow Skin Rejuvenating Gel Face...",
+                    productNo:11,
+                    mrp:"MRP  Rs.",
+                    stickedOff:505,
+                    cost:"RS.",
+                    rs:477,              
+                    discount:"₹ 29 extra cashback",
+                addcart:"ADD TO CART"
+                },
+                {
+                    image:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/p/h/pho0052.jpg",
+                    name:"Photostable Sunscreen Emulgel SPF 40+ PA+",
+                    productNo:12,
+                    mrp:"MRP  Rs.",
+                    stickedOff:716,
+                    cost:"RS.",
+                    rs:675,              
+                    discount:"₹ 41 extra cashback",
+                addcart:"ADD TO CART"
+                },
+
+            ]
+
+            var cartData= JSON.parse(localStorage.getItem("cartData")) || []
+            postCovidEssentialsData.map(function(elem){
+                main1=document.createElement("div");
+                main1.setAttribute("id","main1")
+
+                mainImage=document.createElement("img");
+                mainImage.setAttribute("src",elem.image)
+                mainImage.setAttribute("id","mainImage")
+
+                nameDiv=document.createElement("div");
+                nameDiv.setAttribute("id","nameDiv")
+                nameDiv.innerText=elem.name
+
+                hrDiv=document.createElement("div");
+                hrDiv.setAttribute("id","hrDiv")
+                hr=document.createElement("hr");
+                hrDiv.append(hr)
+
+                priceDiv3=document.createElement("div");
+                priceDiv3.setAttribute("id","priceDiv3")
+
+                    mrpCostParaDiv=document.createElement("div");
+                    mrpCostParaDiv.setAttribute("id","mrpCostParaDiv")
+                        var  mrpPara=document.createElement("h3");
+                        mrpPara.innerText=elem.mrp
+                        var strickedPara=document.createElement("h3");
+                        strickedPara.setAttribute("id","strickedParastyle")
+                        strickedPara.innerText=elem.stickedOff
+                    mrpCostParaDiv.append( mrpPara,strickedPara)
+                        
+        
+                        costDiv=document.createElement("div");
+                        costDiv.setAttribute("id","costDiv")
+                            var cost=document.createElement("h3");
+                            cost.innerText=elem.cost
+                            var rs=document.createElement("h3");
+                            rs.innerText=elem.rs
+                        costDiv.append(cost,rs)
+        
+                    priceDiv3.append( mrpCostParaDiv,costDiv)
+
+                discountDiv=document.createElement("div");
+                discountDiv.setAttribute("id","discountDiv")
+                discountDiv.innerText=elem. discount
+                    
+                buttonDiv=document.createElement("div")
+                buttonDiv.setAttribute("id","buttonDiv")
+                    button=document.createElement("button");
+                    button.setAttribute("id","button")
+                    button.innerText=elem.addcart
+                    button.addEventListener("click",function(){ 
+
+                       
+                        if(cartData.length>0)
+                        {   var flag=false
+                            var productNumbers=elem.productNo
+                           
+                                cartData.map(function(elm){
+                                    if( productNumbers==elm.productNo)
+                                    {   elm.qty++
+                                        flag=true;
+                                    
+                                    }
+                                })
+        
+                                    if(flag==false)
+                                    {
+                                        elem.qty=1;
+                                        cartData.push(elem)
+                                    }
+                                
+                        }
+                        else{
+                            elem.qty=1;
+                            cartData.push(elem)
+                        }
+                       
+
+                        localStorage.setItem("cartData",JSON.stringify(cartData))
+
+                        alert("Product added to Cart")
+                    })
+                    
+                    buttonDiv.append(button)
+
+                main1.append(mainImage,nameDiv,hrDiv, priceDiv3,discountDiv,buttonDiv)
+                document.querySelector("#productsContainerDiv").append(main1)
+            })
+
+</script>
