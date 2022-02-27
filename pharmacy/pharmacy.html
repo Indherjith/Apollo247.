@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pharmacy</title>
+    <link rel="stylesheet" href="pharmacy.css">
+    <script src="https://kit.fontawesome.com/98d5a2ffd1.js" crossorigin="anonymous"></script>
+</head>
+<body >
+   <div id="parent">
+
+        <!-- HEADER NAV -->
+
+        <div class="navheader">
+            <div class="body">
+                <div class="containerHeader">
+                    <div class="headers">
+                        <a href=""><img src="https://newassets.apollo247.com/images/ic_logo.png" id="img" alt="" title="Online Doctor Consultation & Medicines"></a>
+                    </div>
+                    <div class="headerlink">
+                        <div class="inner">
+                            <a>doctors</a>
+                            <a href="">Consult Online</a>
+                        </div>
+                        <div class="second">
+                            <a>pharmacy</a>
+                            <a href="" >Medicines & other products</a>
+                        </div>
+                        <div class="inner">
+                            <a>lab tests</a>
+                            <a href="" >Health check-ups</a>
+                        </div>
+                        <div class="inner">
+                            <a>covid-19</a>
+                            <a href="" >Latest updates</a>
+                        </div>
+                        <a href=""><img id="cartImage" src="https://www.vhv.rs/dpng/d/598-5987992_shopping-cart-chen-shopping-cart-with-circle-icon.png" class="cart" alt=""></a>
+                        <a href=""><img  id="loginImage"   src="data:image/png;base64,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" class="login" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+
+
+    <!-- small navbaar -->
+    <div id="innerparent1">
+                <div id="navContainer">
+                    <ul>
+                        <li>Covid Essentials</li>
+                        <li>Health Condtion</li>
+                        <li>Ayurveda</li>
+                        <li>Health Devices</li>
+                        <li>Baby Care</li>
+                        <li>Personal Care</li>
+                        <li>Home Essentials</li>
+                        <li>Health & Nutrition</li>
+                        <li>Apollo Life</li>
+                    </ul>
+
+                </div>
+    </div>
+        <!-- search parent -->
+        <div id="searchParent">
+            <div id="serachInput"><input type="text" placeholder="Search meds, brands and more" id="input">
+                <div><a href=""><i  id="searchIcon" class="fa-solid fa-greater-than"></i></a></div>
+            </div>
+            <div id="specialOffer">
+                <div><img id="offerIcon"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiTTXtJpkUc8wlk1xOcJZQ8N6WmRkCyPF-Q&usqp=CAU" alt=""></div>
+                <div><h3>Special offers</h3></div>
+            </div>
+        </div>
+    <!-- Advertisemet banner -->
+    <div id="addParent">
+        <div id="advertisementContainer">
+
+                    <!-- left Advertisemet -->
+            <div id="advertisementBannerLeft">
+                <img id="advertisementBannerImage" src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/p/a/pain-relief_1460-x-340_website_11-2-22.jpg" alt="">
+            </div>
+             <!-- Rightt Advertisemet -->
+            <div  id="advertisementBannerRight">
+                <!-- <div id="specialOffer"><a href=""><img id="specialOfferImage" src="https://newassets.apollo247.com/pub/media/ves/brand/dabur_21oct.png" alt="">Special Offer</a></div> -->
+                <div id="topChild">
+                <div id="placeYourOrder">
+                    <div  id="placeYourOrderChild1" ><h4 >place your oredr via prescription</h4>
+                        <h2 id="orederButton"><button>UPLOAD</button></h2>
+                    </div>
+                     </div>
+                <div id="pad" ><img id="padDiv" src="https://newassets.apollo247.com/images/ic_prescription_pad.svg" alt="Online Medicines"> </div>
+                
+            </div>
+            <div id="bottomChild"> <img id="offerIcon" src="https://static.thenounproject.com/png/7345-200.png" alt=""> <a id="buttonAnchor" href=""><h4>Place your Order</h4></a></div>
+        </div>
+        </div>
+
+    </div>
+
+       <!--  /* SHOP BY HEALTH CONDITIONS STYLES */ -->
+       <div id="innerparent2">
+    <h3 id="headings">SHOP BY HEALTH CONDITIONS</h3>
+    <hr>
+    <div id="container"></div>
+    </div>
+
+        <!-- POST COVID ESSENTIALS -->
+
+    <div id="innerparent3">
+        <div id="headings2" >
+            <h3> POST COVID ESSENTIALS</h3>
+            <a href="covidEssentialViewall.html"><h3>VIEW ALL</h3></a>
+        </div>
+        <hr>
+        <div id="container2"></div>
+    </div>
+
+         <!-- SKIN CARE -->
+         <div id="innerparent4">
+            <div id="headings2" >
+                <h3>SKIN CARE</h3>
+                <a href="covidEssentialViewall.html"><h3>VIEW ALL</h3></a>
+            </div>
+            <hr>
+            <div id="container3"></div>
+        </div>
+
+        <!-- HEALTH DEVICES -->
+        <div id="innerparent5">
+            <div id="headings2" >
+                <h3>HEALTH DEVICES</h3>
+                <a href="covidEssentialViewall.html"><h3>VIEW ALL</h3></a>
+            </div>
+            <hr>
+            <div id="container4"></div>
+        </div>
+
+        <!-- HOT SELLERS -->
+        <div id="innerparent6">
+            <div id="headings2" >
+                <h3> HOT SELLERS</h3>
+                <a href="covidEssentialViewall.html"><h3>VIEW ALL</h3></a>
+            </div>
+            <hr>
+            <div id="container5"></div>
+        </div>
+
+        <!-- SHOP BY CATEGORY -->
+        <div id="innerparent7">
+            <div id="headings2" >
+                <h3>  SHOP BY CATEGORY </h3>
+            </div>
+            <hr>
+            <div id="container6"></div>
+        </div>
+
+        <!-- EXPLORE - POPULAR PRODUCTS -->
+        <div id="innerparent8">
+            <div id="headings2" >
+                <h3>EXPLORE - POPULAR PRODUCTS</h3>
+            </div>
+            <hr>
+            <div id="container7"></div>
+        </div>
+
+        <!-- MAP AND THINGS -->
+        <div id="container8" >
+            <div id="apolloDesign">
+                <div id="innerDesign">
+                    <div id="forText">
+                        <h1>ORDER MEDICINE ONLINE FROM</h1>
+                       
+                        <h2>Genuine medicines and essentials delivered in a jiffy!</h2>
+                    </div>
+                    <div id="forImage">
+                        <img src="https://newassets.apollo247.com/images/apollopharmacy/pharmacyLogoColor.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="mapDesign">
+                <img id="map" src="https://newassets.apollo247.com/images/apollopharmacy/indiaMap.svg" alt="">
+                
+                
+            </div>
+        </div>
+
+        <!-- HALF PRICE STORE -->
+        <div id="innerparent9">
+            <div id="headings2" >
+                <h3>HALF PRICE STORE </h3>
+                <a href="covidEssentialViewall.html"><h3>VIEW ALL</h3></a>
+            </div>
+            <hr>
+            <div id="container9"></div>
+        </div>
+
+        <!-- SHOP BY BRAND -->
+        <div id="innerparent10">
+            <div id="headings2" >
+                <h3>  SHOP BY BRAND </h3>
+            </div>
+            <hr>
+            <div id="container10"></div>
+        </div>
+
+        <!-- BANNER IMAGE CREATION -->
+        
+       <div id="innerparent11">
+            <div id="container11">
+
+                <!-- child1 -->
+                <div id="child1">
+                    <div id="child1Div">
+                        <div>
+                            <img id="bannerApolloImage" src="https://newassets.apollo247.com/images/pharmacy_logo.svg" alt="">
+                        </div>
+                        <div >
+                               <b>Yay! Now u can</b>
+                               <h1 id="whatsappText">WHATSAPP</h1> 
+                               <h1>TO ORDER</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- child2 -->
+                <div id="child2">
+                            <div id="child2Div">
+                                <div id="cashBackText">
+                                    <h3>You can get 10% CASH BACK on your first order
+                                    </h3>
+                                    <h3>+FREE DELIEVERY</h3>
+                                </div>
+                                <div id="buttonParent">
+                                    <button id="bannerButton"><h3>Whatsapp @+91-4048218743</h3>
+                                    <img id="whatsAppImage" src="https://newassets.apollo247.com/images/ic-whatsapp.png" alt=""></button>
+                                </div>
+                            </div>
+                </div>
+
+                <!-- child3 -->
+                <div id="child3"><img id="bannerDoctersImages" src="https://newassets.apollo247.com/images/whatsUpBaner.png" alt=""></div>
+                
+            </div>
+       </div>
+
+       <!-- CONTENT PARAGRAPH -->
+       <div class="textcont">
+        <h3>Apollo 24|7 Specialities - Expertise You Can Trust</h3>
+        <p>A medical specialty is a specific area of medical practice that mainly focuses on a defined set of diseases, patients, philosophy, or skills. Examples include Paediatrics, Dermatology, Psychiatry, Gynaecology, and more. </p>
+
+        <p>Apollo 24|7 offers advanced services for a range of medical specialities, including:</p>
+        <ul class="pointers">
+            <li>
+                <a href=""> Dermatology  - </a>A specialised branch of medicine that focuses on hair, nails, and skin-related disorders. Dermatology also encompasses conditions that affect the thin lining of your mouth, eyelids, and nose.
+            </li>
+
+            <li>
+                <a href="">Obstetrics and Gynaecology -</a> Two major medical specialities that focus on women’s reproductive health. Obstetrics involves care during pregnancy, childbirth and after-delivery, while gynaecology specialises in issues related
+                to women’s reproductive health.
+            </li>
+            <li>
+                <a href="">General Physician/Internal Medicine</a> - General Physicians are highly experienced medical doctors who provide a broad range of non-surgical medical and health care to their patients. An internal medicine physician is a specified
+                medical doctor who is highly proficient in internal medicine.
+            </li>
+            <li> <a href="">Paediatrics</a> It majorly focuses on the health and medical care of children, infants, and young adults.
+            </li>
+
+            <li>
+                <a href="">
+                Neurology 
+            </a> It is a specific medical branch that focuses on diagnosing and treating nervous system disorders, which includes the brain, nerves, muscles, and blood vessels.
+
+            </li>
+
+            <li>
+                <a href="">
+                Endocrinology 
+            </a> A specific area of medicine that is related to the study of the endocrine system. The endocrine glands produce hormones that help monitor various functions in the body, including metabolism, growth, and development.
+            </li>
+
+            <li>
+                <a href="">
+                COVID Consult 
+            </a> It is a specialty of internal medicine concerned with heart-related disorders. Cardiology focuses on detecting and treating electrophysiology, congenital heart defects, heart failure, coronary artery, valvular heart disease,
+                and other related conditions.
+            </li>
+
+            <li>
+                <a href="">
+                Orthopaedics 
+            </a> A specific branch of medicine that majorly focuses on treating injuries and diseases related to the musculoskeletal system of the body.
+            </li>
+
+            <li>
+                <a href="">
+                Family Physician 
+            </a> A medical doctor who provides care to people of all age groups and gender. A family physician specialises in diagnosing chronic conditions, checking for signs or symptoms, providing preventative care, and referring people
+                to specialists, if needed.
+
+            </li>
+
+        </ul>
+
+        <h3>
+            Why Choose Online Consultation?
+        </h3>
+        <p>There are several ways to reach out to a doctor without the need to visit a hospital or clinic, all thanks to technology. With the online facility available, doctor consultations have become easier, which can help you get the right health care.
+        </p>
+
+        <p>Benefits for choosing Apollo 24|7’s online doctor consultations:</p>
+        <ul class="pointers">
+            <li>Highly-qualified doctors are available 24x7 for you
+            </li>
+            <li>Emergency medical services are available
+            </li>
+            <li>Get online consultations within 15 minutes
+            </li>
+            <li>Affordable rates and personalised solutions
+            </li>
+            <li>
+                Instant online consultations anytime, anywhere
+            </li>
+
+        </ul>
+        <h3>When to Consult a Doctor?
+        </h3>
+        <p>If your health issues are complicated and your general practitioner feels that it needs immediate medical attention from a specialised doctor, you may be recommended to one. You can also get an online consultation with a medical specialist if
+            you aren’t satisfied with the results. </p>
+        <h3>How to Consult a Doctor?</h3>
+        <p>Consult a doctor online with Apollo 24|7</p>
+        <p>Prioritise your health by choosing from 100+ medical specialities and 4000+ doctors online. Avail personalised healthcare solutions for any health concern with imperative online doctor consultations at Apollo 24|7.</p>
+        <p>Steps to book an online doctor consultation:
+
+        </p>
+
+        <ul class="pointers">
+            <li>Choose the doctor</li>
+            <li>Book your appointment
+            </li>
+            <li>Make the payment
+            </li>
+            <li>Be available in the consultation room on time</li>
+            <li>
+                Get your doctor's note instantly
+
+            </li>
+            <li>
+                Constant follow-ups via text till next 7 days
+            </li>
+        </ul>
+        <p>How to consult a doctor offline through the Apollo 24|7 app or website?</p>
+
+        <ul>
+
+            <li>Choose the medical doctor
+            </li>
+            <li>
+                Book your appointment
+
+            </li>
+            <li>
+                Visit the medical doctor at clinic or hospital
+            </li>
+            <li>
+                Make the payment
+            </li>
+            <li>
+                Get your doctor's note instantly
+            </li>
+        </ul>
+    </div>
+
+
+        <!-- FAQ'S -->
+
+    <div id="dropdowncont">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+
+        <button class="question">
+What is an online doctor consultation or online medical consultation?
+</button>
+        <div class="answers">
+            <p>
+                When you speak to a doctor about your health concerns through an audio/video/ chat, it is known as an online doctor consultation or online medical consultation. This is a good alternative for times when you cannot visit a doctor physically at the clinic
+                or hospital. An online doctor consultation works the same way as a physical consultation where you get a prescription after the consultation is complete. Some of the benefits of an online medical consultation at Apollo 24/7 are that you
+                can consult a doctor at the convenience of your home and can order the prescribed medicines by using the ‘Order Medicines’ option.
+            </p>
+        </div>
+
+        <button class="question">
+How do I consult a doctor online now?
+</button>
+        <div class="answers">
+            <p>
+                You can book an online consultation either on the website or mobile app of Apollo 24/7 in two ways. Click on the ‘Find a Doctor’ button on the homepage of the website/app, select a specialty or type the name of the doctor directly. Once you select a doctor,
+                you can click on the “Consult Now’ button to start the online consultation. If you're looking for a doctor based on your symptoms, you may start by going to the homepage of the website/app. Then click on the ‘Track Symptoms’ tab, search
+                for your symptoms or select a few of them based on your health condition. Click ‘Show Doctors’, select a doctor and click on the ‘Consult Now’ button to start the online consultation.
+            </p>
+        </div>
+
+        <button class="question">
+        Do you provide online doctor consultation for emergencies?
+    </button>
+
+        <div class="answers">
+            <p>
+                No. We do not recommend or provide online consultations for emergencies. However, our emergency medical services are available round-the-clock which can be accessed by calling 1066 or clicking the ‘Emergency’ tab on the homepage of our website/app.
+            </p>
+        </div>
+
+        <button class="question">
+        During the online doctor consultation, the audio/video was not clear.
+    </button>
+        <div class="answers">
+            <p>
+                This may happen due to poor internet connectivity or due to some technical glitch. In such cases, please check your internet connection and if the issue persists, please email us at helpdesk@apollo247.com with the screenshot of the error and we will get
+                this checked from our end.
+            </p>
+        </div>
+
+        <button class="question">
+        Where is my doctor's note for the online doctor consultation?
+    </button>
+        <div class="answers">
+            <p>
+                You can find your doctor's note&nbsp;for your online consult on the ‘Health Records’ tab. Once you click on this tab, you will be able to view/download your doctor's note&nbsp;by clicking on the ‘Consults &amp; Rx’ tab.
+            </p>
+        </div>
+
+        <button class="question">
+        What is the minimum fee for online doctor consultation?
+    </button>
+
+        <div class="answers">
+            <p>
+                Online doctor consultation at Apollo 24/7 starts at Rs.200. The consultation fee will vary based on the doctor, the specialty, years of experience of the doctor, any discounts or promotion applied, etc.
+            </p>
+        </div>
+
+        <button class="question">
+    How do I pay for the online/offline doctor consultations?
+   </button>
+        <div class="answers">
+            <p>
+                Online consultations are prepaid and the payment can be made by either of the given ways – Paytm, Debit/Credit Card, and Netbanking. For offline consultations, you will need to make a partial payment online and the rest can be paid to the doctor at the
+                hospital/clinic.
+            </p>
+        </div>
+        <button class="question">
+        Yes. If you cancel the online consultation, the refund for the same will reflect in your account within 5 to 7 working days. 
+    </button>
+        <div class="answers">
+            <p>To book an online appointment with a specialist doctor, you can select the speciality from the displayed list or type in the name of the speciality. Once you select the speciality, you will be shown a list of doctors and their availability.
+                If you wish to book an online appointment for a later time, you can choose the doctors that have ‘Consult Tomorrow’ or ‘Consult in 2 days’, ‘Consult in 3 days,’ etc. You can also choose the ‘Schedule for Later’ option after selecting the
+                doctor and clicking on the ‘Consult Now’ button.
+            </p>
+        </div>
+
+        <button class="question">
+        For how long can I speak to the doctor?
+    </button>
+        <div class="answers">
+            <p>
+                Once you book an online consultation on our app, you will get 15 minutes to speak to the doctor. This window can, however, change according to your health condition and the number of queries you have.
+            </p>
+        </div>
+    </div>
+
+       <!-- FOOTER -->
+       <div id="innerparent12">
+            <div id="footerImageDiv"><img src="https://newassets.apollo247.com/images/ic_logo.png" alt=""></div>
+            <div id="footerContent">
+                <div id="content1">
+                    <div><h2>About Apollo 24/7</h2></div>
+                    <div>
+                        <li><a href=""> About Us</a></li>
+                        <li><a href="">Contact Us / Grievance</a></li>
+                        <li><a href="">FAQs</a></li>   
+                        <li><a href="">Health Queries</a></li>   
+                        <li><a href="">Terms and Conditions</a></li>    
+                        <li><a href="">Returns Policy</a></li>    
+                        <li><a href="">Refund Policy</a></li>    
+                        <li><a href="">Privacy Policy</a></li>    
+                        <li><a href="">Apollo 247 Android App</a></li>    
+                        <li><a href="">Apollo 247 iOS App</a></li>    
+                        <li><a href="">Apollo 247 Sitemap</a></li>    
+                        <li><a href="">Online Doctor App</a></li>    
+                        <li><a href="">Online Medicine App</a></li>    
+                        <li><a href="">Apollo Pharmacy</a></li>    
+                        <li><a href="">Hospitals And Clinics</a></li>    
+                        <li><a href="">Blogs</a></li> 
+                    </div>
+                </div>
+                <div id="content1">
+                    <div><h2>Services</h2></div>
+                    <div>
+                        <li><a href="">Covid Consultation</a></li>
+                        <li><a href="">Consult Physicians</a></li>
+                        <li><a href="">Consult Dermatologists</a></li>   
+                        <li><a href="">Consult Paediatricians</a></li>   
+                        <li><a href="">Consult Gynaecologists</a></li>    
+                        <li><a href="">Consult Gastroenterologists</a></li>    
+                        <li><a href="">Consult Cardiologists</a></li>    
+                        <li><a href="">Consult Dietitians</a></li>    
+                        <li><a href="">Consult ENT Specialists</a></li>    
+                        <li><a href="">Consult Geriatricians</a></li>    
+                        <li><a href="">Consult Diabetologists</a></li> 
+                    </div>
+                </div>
+                <div id="content1">
+                    <div><h2>Book Lab Tests</h2></div>
+                    <div>
+                        <li><a href="">RT PCR Test At Home</a></li>
+                        <li><a href="">Book Lab Tests at Home</a></li>
+                        <li><a href="">Renal Profile (KFT, RFT Test)</a></li>   
+                        <li><a href="">Hemogram Test</a></li>   
+                        <li><a href="">Lipid Profile Test</a></li>    
+                        <li><a href="">Thyroid Profile Test (T3 T4 Tsh Test)</a></li>    
+                        <li><a href="">D Dimer Test</a></li>    
+                        <li><a href="">Urine Culture Test</a></li>    
+                        <li><a href="">Complete Blood Count (CBC Test)</a></li>    
+                        <li><a href="">Widal Test</a></li>    
+                        <li><a href="">Liver Function Test (LFT Test)</a></li> 
+                    </div>
+                </div>
+                <div id="content1">
+                    <div><h2>Product Categories</h2></div>
+                    <div>
+                        <li><a href="">View All Brands</a></li>
+                        <li><a href="">Health Care</a></li>
+                        <li><a href="">Personal Care</a></li>   
+                        <li><a href="">Baby Care</a></li>   
+                        <li><a href="">Nutrition</a></li>    
+                        <li><a href="">Health Care Devices</a></li>    
+                        <li><a href="">Baby Skin Care</a></li>    
+                        <li><a href="">Immunity Boosters</a></li>    
+                        <li><a href="">Coronavirus Prevention</a></li>    
+                        <li><a href="">Diabetes Care</a></li>    
+                        <li><a href="">Patanjali Coronil Kit</a></li> 
+                        <li><a href="">Mamaearth Products</a></li> 
+                    </div>
+                </div>
+            </div>
+            <div id="footerButtom">
+                <div><img src="https://newassets.apollo247.com/images/apollopharmacy/logo.svg" alt=""></div>
+                <div>
+                    <h2 class="footerBottomText">Find Us</h2>
+                    <div  id="footerIcons">
+                        <img src="data:image/png;base64,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" alt="">
+                        <img src="data:image/png;base64,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" alt="">
+                        <img src="https://image.similarpng.com/very-thumbnail/2021/01/Illustration-of-Linkedin-icon-on-transparent-background-PNG.png" alt="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAqFBMVEXNIB7////MGhbxx8nRQT/++/vNHhvOGxnMFRL++vrYZmf88vT67OzNIB/PEhDQHBvLAADqrKvwvb3OJybz0dHpnp3iion229rYSEfllpXTNzb66uvYTEvZVFPOEQ7vvcDhe3r34OLaW1jxy8rXX13gc3HlmJfXQD7WNzbttbXhhITNLCbwxMHNLinTS0zlmJzffoLii4/ppqropKjSNDrbY2nhhovgfXuIdCQ9AAAODUlEQVR4nOWdiXLiOBCGbYMlGXwfMYcxNoY4MDgkYWbz/m+2MoQchEMtyxiSv2qrtmYzs/5GR7da3S1Jrleqqml6mLnBYjaJ8sIzJMMr8mgyWwRuFuqapqo1f4FU25+sdvWh7wbJJPeIbdsmUTBCUimEsEJM+mvEyydJ4PpDvVsfZz2E5bA5d9NciinZDuy7KColjaV8eueUA1rLt9RAqJcjF3lmTNmOoO2BYhKbXlSOpi7+c0QT6ssgGRXEPD5wR4fTJMUoCZaiIYUS6m45M4kCpPugVIhBZ6wrFFIgYbZ4LCyFD+4TpmIVj4tM3GeJIkz7g9hkXHdnIbEZD/qpoC8TQajqyxmyLSF0O1k2mi11ETakOqEWOhPTFDN6n4VMc+KE1S1IVULNv49MIp5vw0jM6N6vyliNUM36UazUgreVEkf9rNpcrUTo3/WsOvk2jFbvzm+IcLjILVwzXyls5YthA4RaYJBL8G0YiRFwL0dOQs3t2Zfi2zDaPZeTkYtQ8xOLXJCvFLESvm2VhzAN2nE99uGUUNwO0ssQLjv4khP0Qxh3lhcgHN7nDQzgVijO78G7KpTQ7xjNDOBW2OhAjSOMUHUeavLQWIXIgwPzcUCEw9lFTcRhYXsGmqkAQtXv2c0O4FbI7vmAYWQn7M4fLm0Dj4k8zLviCfW+1/wM3Ql7feZYDith+troHrovbLymYgnDKWf8rC4hNA1FEvo9QUEmcUK4x2YZmQiX5rXsMZ9FTCYfjoFQdYnYOJooWcRlsBrnCTXHu05Aiug55w9UZwk1Z3BNm+hX4cF5xHOEFLDuWFMVKecRzxCq1w24QTyzFs8QusX1TtGtcOFWIVya17rJfMgip43GScIwvn5Aihif9G5OEYa9azT030V6pxBPEKbTa1+DO+FpykM4fLWuzRc9JmS9Hj/2HyXs9o1bAaSIRv/okfgYoTq/ogPveWFvfswsHiP0H24JkCI+HDtLHSEc3sg2+iHSO7IUDxOqM7vpLwbLnh2ep4cJnasIG8KEbIed8NYW4VZHluIhQr1za4twK9I5FGI8RHh/Q5bws5Bxz0a4zG9xjpbC+YFjxnfCtBM3/aXcijvpeUItaPj+rIoQ+Z6z8Y3Qv9k5Wgrn3/bTfUItud05WipO9gdxn9C9uvA9TAjvh232CLWb80f3RXraScLg9vzRfdnBKcLhVV0S8gkbwxOEi1ufo6XI4jjhbVuKnfYsxmdCdXEL4dHzshbqEcKs9xOGkA5iLztMqPV/xhDSQexrBwn96GcMoSQpkX+IULsX4a+hD2GMy38wVk5p8xObn0afVe0r4nvtAGHIN4QIbT6UlFI2NV2G9+dPURSDQd4u1Yuix41GX/T4pqjXK38qzwdURfHnj2dsazB3fyRPnRiOwu+EqmOC4RQSK0YxaEejybQzmyVP/z0/r1brlxdnPh6PW63M98MwpRoOh3p3I03Ttv/S1XX6q+V/TMPQ9/1WqzUez+dz52W9Xq2en/97SpJZZzqJBh6OCTJgn2Z+3Ju+E+oTmLU3lBi3O4vVej6mJGE6pB8vtNRVpX8X+jDMxs4qiXAMYyST95DNO+ESdvBFtpE4WVpj/e4n1qHvTAloANDHtek74Qw0SYk5a9VQ0Xpc6fwRFMM1Z/uEQ9C50P4LSH8UxZhA8ssR3vnfO8I+5NgUTypVInGq+wwpULX7e4QDgD9DDkS0LqJngOGwBl8JM8AqJKOGAGUNcmFkZl8IF+yECLcaAqRrsWDPXzIXnwl1dn/GsJ8aA5TlFfsg4kj/ROgWzBNc8dIGCfW/zGYRvSVLbQnvmPcZw15cwsgfVd9m9m2suw9Cfco8vRFuwlB8KPSYP1WZ6u+Ey5x5ksb/Lm7qv6jLvp2i7U3UhjBg/U3UkK7r6bHCKtUBnGKDHaGeMC9fpRDYsYJL/l/maUoS/Y3QH7H/pknaMCHgelMZ+W+EAFsRL5pdhqV3yky4tRcS6E4UkXWjtqKUw+ycbu9LpXIZMrtsSjFuGlAes2eem+VClEAhKKXdnE+6U9ZjJtwEpChh5jEvQzJq1t6XCtkDSsjLSkLVYW8u09jJ8JNS9nwmVIbcJLl7x25DY1gJbi3qAjIN4rsuJdSn7FGs5o0F3foBl5yEuqaSPARcGpJnDp9NbBhVVp/ZvxfnQ0ros2exIbTi+KRsJtbErCT2DzZ8SuiyH5uRt+b4olZuj0QamRf2vV+yXVlSAekXyDucpHqGsK3E9r+WsBU8Z3cyJTtQJZXdo5FwMecjNJCNElFB8jGgINJMVEmbABbugGdFUUKpvOjwXsdCxnH75zF+8USTNEAsmM9p232RYhdPIhhb7G6bZA00SQes2y+3x2DCsvvaIGlVth3+Izsh8nQpBNyqKVxu6edZpSiDWdV9NWQ/sNMDVChlgEC5wnXC/7puMFH+MXZDOKJ0AijctTMJYA6pE1SdsNxz7FmVbohDgJtJDaIUAGJXZMrjeH/b+6jt8J587j0HRBgHEuBOZuPICiCUyn118B+vDwA5KkjmQpoBfvxwyQYPYcn4967FNVe7kIIXMpMgy5Z0eP7aj1loJW4veGwHiFCZSJA8IbGE9H+P209w+wMixJHEfmUhnpAyEu8prZMQ5RLAUa+BsGxOZj+FoLkKIywkj/2nayHc2I7/IIwgQsoHSaaqhVBCsdeB7DgwQlhCXA2EdASlZA5yJGCEMEbhhAaKSWcMdJSgY9joOoztKZQPvg4b3Etj+5EnPQ66lzZlDxEhj2Ou0zDUHjbj0yDyZ/LCeYKC+jRN+KWIFJ0X7sgb1C+FnS0EENL9E3WclJcPWExPzxaXPh+iOJ7C7N83QuD58MJnfGKPqvHBz/iwOE1FQmK3X4ZVw4kpME4DirVVikQheuR9ERARhsbaYPFSnjjgW1SfSI8rIVF9UESYhLCY9yNnRNhAxJusUhF8ZQUaLOat5YB7i4gnq628XcPTtSA+2M2MlWuguyfOm5ncHr2k4q66Ibdr5d0T6P6Q73aNjp/Iq/w5oFtleX8IugPmuiHtDsWmpDqQW+5ABd7j89xyi9YaeI8PysUweDIVRGvFXjmzzcUA5NMgvGo8+VLWntldmm0+DcSR5coYEqzugt2T3uZEgfLanprP+hrOoHltoNzEK8jcg+cmgvJLuVxvsfJH0PxSSI4w4XJMxQrgtO1yhCF53oPms6DH7BV6uzxvSK6+x+PUCJW6BlQWvOXqg+otVk2bC4CxeK+3gNTMxEnTm2nKnsj+UTMDqHsiUbVsn+rK2MvzPuqeALVrCDdcUqKtAXGl99o1SP2h/dxw/eE/9mX4qf4QUENK/ja7EH323g+fa0gBdcCS3ai9UBd8dcAgezFp0l6k7PvM11puQD0+spvca57Yh/BrPT6gp4IRPzY3iC1AB5avPRXkDHA/Y/OUlQhRyn6soMvpa18MSG8TvpiiCEDIxeF+bxP5HnJB0wyiP4G0W7N3na+5egyRQsQdEkzd+V9Ik6DvPYZgfaIUJeHPYuaR3kpgr9t97xMF7PWF7MHTOL0IpNpNMycxYG8ZHOr1Be3XptjedLEet0LBMfsNlKZ1h2noZ63xfL1adNo4VoAZeAf6tcF77imESIP2pJOUjfZW6/X6pWy2RzXeNNxrZZnvl033dl333truvfXc23XcKxvuZWW/PXfuvLzs2u3NynZ7o6g9KAwlJpAOWFsd6rnH1Tdx294Qb7olGmW/xE3HxKJsgTjIt20T2+3eoc6Jb00To/emicV7z8RPLRO5miZKR/omVul9ib4LI/zW//Jk+8td50txbS83ioNDvS9/fv/SX9CD9uf3Ef4FvaB/fj/vX9CT/Rf01f/5byP8gvctfv4bJb/gnZkbtxgMbwX9gveefv6bXb/g3bVf8HbeL3j/8Oe/YfkL3iH9BW/J/vz3gG9vKYLfdP4F73L//LfV6VJ8tW4FEVmvx3NgjhPK6fRW5ik+ldh7glAOb2RDJb1TyXanCOUwvoUAqhWfzCY8SSgvzetHtMwDBwpmQtkFVFE1I1zsB2ZghKrD3j27ESkD50wZzxlCWbtuRAp47pL9HGGJeL0TFZ8HPE9IEa/Wf7O884AMhLLqXumOahGXoZSOgbA0Gtdo+skZMwEhlP3e1QX7Ee6xVSixEcrhVEiOhDghNGWsi2AklNPXq7paxMZryvjlrISy3r+iLRV7feY+MsyEcnf+cC37DXkAdNBiJ5RVv3cVQUZk93xAwTWAsCzBtZufqdiGleqCCKkj/tDw3RsiD+dc7UqE1DJ2Gt1TsdGB1ulCCeXhfQ5501WoUJzfg8uuwITUh+vgZoYR4w6Tn1aZUE6DJoYRxe0g5fhaHkJZ8xPr0raRWAlfI3cuQsro9i5qOLDdczkz5jkJy5wNg1yKERPje45F7YR0V13k1iUYsZUvKhSuViCkxvGuZ9Udp1Ks3l2lVhWVCGU160dxnYxKHPWzal1/qhGW2+p9ZNbkySFiRkGVlzCEEFLG0JmY7C1u2PlMc+KE1UuOqhPSuaovZ8gWG4+zbDRb6iK6UokgLJX2B7EpKFyFsBkP+qmgLxNFSJUtosKCF2Ht4ylWES0EvjoskFCWdfdumkuEsxxLQkghUj69cwU9X7aVUEIqfRkko4KYGEiJ6NQkxSgJlkLxZPGEVLrvBknkmTFhXJcIk9j0oiRwfdF4ci2EVJoeZk45Y2PbJNbR4UTIIqYdlzPTyUK9nk4G9RCWUrv6sBzNycBTbDs2ibKbuXRGKsSMbVvxBpNy5IZ6t75uhfURbqWqWjmgbrCYTaK88AzJ8Io8mswWgVsOm6bW3YnxfyGBPpJROA34AAAAAElFTkSuQmCC" alt="">
+                    </div>
+                </div>
+                <div><h2  class="footerBottomText">Get Apollo Mobile App</h2>
+                    <div id="playStoreIcons">
+                        <img src="https://w7.pngwing.com/pngs/52/715/png-transparent-google-play-logo-google-play-computer-icons-app-store-google-text-logo-sign.png" alt="">
+                        <img src="data:image/png;base64,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" alt="">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+   </div> 
+
+</body>
+</html>
+
+<script src="pharmacy.js"></script>
