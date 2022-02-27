@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .logincontainer {
+            background-color: rgb(0, 0, 0, 0.1);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .login {
+            width: 340px;
+            padding: 20px;
+            box-shadow: 0 5px 40px 0 rgb(0 0 0 / 30%);
+            min-height: 240px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        
+        .login>h2 {
+            color: #02475b;
+            font-size: 35px;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+        
+        .login>h2+p {
+            color: #0087ba;
+            margin: 10px 0;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: normal;
+        }
+        
+        .enter {
+            display: flex;
+            border-bottom: 2px solid #0087ba;
+            padding-bottom: 0px;
+        }
+        
+        .enter>p {
+            color: #02475b;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 19px;
+        }
+        
+        .enter>input {
+            color: #01475b;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px;
+            padding-left: 4px;
+            padding-bottom: 5px;
+            border: none;
+            outline: none;
+        }
+        
+        .number>div>img {
+            width: 76px;
+            width: 56px;
+            background-color: orange;
+            border-radius: 60%;
+            cursor: pointer;
+        }
+        
+        .number {
+            display: flex;
+        }
+        
+        .checkbox {
+            width: 33px;
+            height: 24px;
+            background-color: green;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        .check>p>a {
+            text-decoration: none;
+            color: orange;
+        }
+        
+        .check {
+            display: flex;
+        }
+        
+        .close {
+            text-align: center;
+            text-align: right;
+            font-size: 42px;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .close>img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-left: 95%;
+        }
+        
+        .close>img:hover {
+            background-color: red;
+        }
+        
+        .otpmsg {
+            width: 70%;
+            margin: 5px;
+        }
+        
+        .otpcontainer {
+            background-color: rgb(0, 0, 0, 0.1);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .otppopup {
+            width: 340px;
+            padding: 20px;
+            box-shadow: 0 5px 40px 0 rgb(0 0 0 / 30%);
+            min-height: 340px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        
+        .close2 {
+            text-align: center;
+            text-align: right;
+            font-size: 42px;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .close2>img {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-left: 95%;
+        }
+        
+        .close2>img:hover {
+            background-color: red;
+        }
+        
+        .line {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #000;
+            line-height: 1px;
+            margin: 10px 0 20px;
+        }
+        
+        .line span {
+            background: #fff;
+            padding: 0 10px;
+        }
+        
+        .otppopup>h2 {
+            color: #02475b;
+            font-size: 35px;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+        
+        .otppopup>h2+p {
+            color: #0087ba;
+            margin: 10px 0;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        
+        .otpenter>div>img {
+            width: 35px;
+            width: 35px;
+            background-color: orange;
+            border-radius: 60%;
+            cursor: pointer;
+        }
+        
+        .otpenter {
+            display: flex;
+            margin: 20px;
+            margin-left: 10px;
+            justify-content: space-between;
+            /* margin-bottom: 20px; */
+        }
+        
+        .otpenter>div>input {
+            color: #01475b;
+            font-size: 18px;
+            border-bottom: 2px solid #02475b;
+            font-weight: 500;
+            /* padding: 10px; */
+            /* padding-left: 0px; */
+            /* padding-bottom: 0px; */
+            outline: none;
+            border: none;
+            margin: 10px;
+            margin-left: 3px;
+        }
+        
+        .otpinp {
+            border-bottom: 2px solid #0087ba;
+            padding: 0px;
+        }
+        
+        .otpinp>input {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #Resend {
+            color: orange;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .call {
+            color: #fff;
+            background-color: orange;
+            width: 80%;
+            padding: 10px;
+            font-size: 13px;
+            font-family: sans-serif;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 1px;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 30px;
+        }
+        
+        .get {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>hi</div>
+    <div class="logincontainer">
+
+        <div class="login">
+            <div class="close">
+                <img src="./icons/close.png" alt="">
+            </div>
+            <h2>Hi</h2>
+            <p>Please enter your mobile number to login</p>
+
+            <div class="number">
+                <div class="enter">
+                    <p>+91</p>
+                    <input type="text">
+                </div>
+                <div class="next">
+                    <img src="./icons/right1.png" alt="">
+                </div>
+
+            </div>
+            <p class="otpmsg">otp will sent to this number by sms and whatsapp</p>
+
+            <div class="check">
+                <input type="checkbox" class="checkbox" checked>
+                <p>
+                    By signing up, I agree to the <a href="">Privacy Policy, Terms and Conditions</a> of Apollo247
+                </p>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <div class="otpcontainer">
+
+        <div class="otppopup">
+            <div class="close2">
+                <img src="./icons/close.png" alt="">
+            </div>
+
+            <h2>great</h2>
+            <p>Now type in the OTP sent to you for authentication</p>
+
+            <div class="otpenter">
+                <div class="otpinp">
+                    <input class="otpinput" type="password" placeholder="Enter otp here">
+                </div>
+                <div class="next2"><img src="./icons/right1.png" alt=""></div>
+            </div>
+            <a id="Resend">RESEND OTP</a>
+
+            <p class="line"><span class="or">or</span></p>
+
+            <div class="call">
+                <img src="./icons/icons8-call-24.png" alt="">
+                <a class="get">GET OTP ON CALL</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <button class="loginclick">click here</button>
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector(".next").addEventListener("click", function() {
+
+    })
+
+    document.querySelector(".loginclick").addEventListener("click", function() {
+        document.querySelector(".logincontainer").style.display = "flex";
+    })
+    document.querySelector(".next").addEventListener("click", function() {
+        document.querySelector(".logincontainer").style.display = "none";
+        document.querySelector(".otpcontainer").style.display = "flex";
+
+
+    })
+    document.querySelector(".next2").addEventListener("click", function() {
+        var password = document.querySelector(".otpinput").value;
+        if (password == "1234") {
+            alert("login successfull")
+            document.querySelector(".otpcontainer").style.display = "none";
+            window.location.href
+        } else {
+            alert("entered wrong otp try again")
+        }
+    })
+    document.querySelector("#Resend").addEventListener("click", function() {
+
+        alert("otp Resended again");
+        document.querySelector(".otpcontainer").style.display = "flex";
+
+    })
+    document.querySelector(".close2").addEventListener("click", function() {
+        document.querySelector(".otpcontainer").style.display = "none";
+    })
+
+
+    document.querySelector(".close").addEventListener("click", function() {
+        document.querySelector(".logincontainer").style.display = "none";
+    })
+</script>

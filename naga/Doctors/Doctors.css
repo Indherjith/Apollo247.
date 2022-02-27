@@ -1,0 +1,1069 @@
+body {
+    background-color: #f3f3f3;
+    font-family: sans-serif;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+}
+
+.body {
+    display: flex;
+    margin: auto;
+    font-family: IBM Plex Sans, sans-serif;
+}
+
+.container {
+    width: 74.5%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    box-shadow: 0px 0px 30px #dcdfce;
+}
+
+.headers {
+    height: 80px;
+    display: block;
+    /* padding: ; */
+}
+
+#img {
+    width: 80px;
+    margin: 11px 12px;
+}
+
+.headerlink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    min-width: 530px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.login {
+    height: 80%;
+    padding: 12px;
+    position: relative;
+}
+
+.cart {
+    position: relative;
+}
+
+.inner {
+    color: #02475b;
+    height: 100%;
+    display: flex;
+    padding: 12px 16px;
+    font-size: 1em;
+    width: 75px;
+    align-items: flex-start;
+    font-weight: 600;
+    border-bottom: 5px solid transparent;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inner:first-child {
+    background-color: #f7f8f5;
+    border-bottom: 5px solid #00b38e;
+}
+
+.inner>a:first-child {
+    display: block;
+    min-width: 50px;
+    font-size: 13px !important;
+    font-weight: 600;
+    line-height: 18px !important;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+
+.inner>a:last-child {
+    display: block;
+    min-width: 75px;
+    text-decoration: none;
+    color: #02475b;
+    opacity: 0.6;
+    font-size: 12px !important;
+    border-bottom: 2px #02475b;
+    line-height: 17px !important;
+    padding-top: 3px;
+}
+
+.second {
+    color: #02475b;
+    height: 100%;
+    display: flex;
+    padding: 12px 16px;
+    font-size: 1em;
+    width: 85px;
+    align-items: flex-start;
+    font-weight: 600;
+    border-bottom: 5px solid transparent;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.second>a:first-child {
+    display: block;
+    min-width: 85px;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+
+.second>a:last-child {
+    display: block;
+    min-width: 75px;
+    text-decoration: none;
+    color: #02475b;
+    opacity: 0.6;
+    font-size: 12px !important;
+    border-bottom: 2px #02475b;
+    line-height: 17px !important;
+    padding-top: 3px;
+}
+
+.firstone {
+    display: flex;
+    padding: 20px 10px 20px 10px;
+    border-bottom: 1px solid #01475b;
+    margin: 20px;
+    font-size: 13px;
+}
+
+.firstone>a:first-child {
+    color: #fc9916;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.firstone>img {
+    width: 10px;
+    height: 10px;
+}
+
+.firstone>a {
+    color: #007c93;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.top {
+    background-color: #f7f8f5;
+    width: 75%;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.topcont {
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    width: 95%;
+    height: 800px;
+    margin: auto;
+}
+
+.left {
+    width: 67%;
+}
+
+.right {
+    width: 33%;
+}
+
+#doctorconsult {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    background-color: white;
+    padding: 2% 1%;
+}
+
+#top-Specialities {
+    border: none;
+    padding: 2% 2%;
+    height: 30%;
+}
+
+#whyappolo {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 20px;
+    border: none;
+    padding: 2%;
+}
+
+#doctorconsult>div>div>input {
+    width: 120%;
+    border: 0;
+    height: 35%;
+    margin: 0;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    letter-spacing: inherit;
+    color: #01475b;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 9px;
+    outline: none;
+}
+
+#search {
+    width: 20px;
+    height: 20px;
+    margin: 15% 0px;
+}
+
+#searchbar {
+    display: flex;
+    width: 92%;
+    border-bottom: 2px solid #00b38e;
+    margin-left: 6%;
+}
+
+#doctorconsult>div>div+div {
+    width: 80%;
+}
+
+#doctorconsult>h1 {
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 100%;
+    margin-left: 6%;
+    color: #007c93;
+}
+
+#doctorconsult>p {
+    color: #02475B;
+    margin-left: 4%;
+    font-weight: 600;
+}
+
+#locations {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#locations>a {
+    color: #00b38e;
+    margin-left: 2%;
+    border: 1px solid #00b38e;
+    text-decoration: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+#belowh1 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#rs250 {
+    width: 100%;
+    height: 80%;
+    margin-top: 7%;
+}
+
+#image250 {
+    border: none;
+    height: 35%;
+}
+
+#top-Specialities>h1 {
+    color: #02475B;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #00b38e;
+}
+
+#specialties {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+    justify-content: space-around;
+}
+
+#specialties>div {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+#specialties>div>img {
+    width: 40%;
+    height: 20%;
+    display: block;
+    margin: 10% auto;
+}
+
+#specialties>div>h3 {
+    color: #02475B;
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+    margin: 5% auto;
+    width: 100%;
+}
+
+#specialties>div>p {
+    font-size: 12px;
+    color: grey;
+    font-weight: 600;
+    text-align: center;
+}
+
+#specialties>div>p+p {
+    font-size: 11px;
+    color: #02475B;
+    font-weight: 600;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#whyappolo>h3 {
+    color: #01667c;
+    font-family: sans-serif;
+    margin: 0px 16px;
+}
+
+#whyappolo>ul {
+    color: #02475b;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 170%;
+}
+
+.whybutton {
+    color: black;
+    font-family: sans-serif;
+    padding: 3% 5%;
+    margin: auto;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    background-color: #f3f3f3;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.btn {
+    margin: auto;
+    display: flex;
+}
+
+ul+h1 {
+    color: black;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10% 0 5% 5%
+}
+
+.btn+div {
+    display: flex;
+    border-bottom: 1px solid #02475b99;
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.btn+div>h1 {
+    font-size: 16px;
+    color: #01475b;
+    margin-left: 10%;
+}
+
+.btn+div>img {
+    margin-left: 5%;
+}
+
+li {
+    display: flex;
+}
+
+li>img {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+li>p {
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+}
+
+#iconul {
+    padding-bottom: 10%;
+    /* margin: auto;
+    border-bottom: 1px solid #007c93; */
+}
+
+#ulbelow {
+    padding-top: 5%;
+    border-top: 1px solid #007c93;
+    max-width: 90%;
+    margin: auto;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: gray;
+    font-size: 13px;
+    text-align: left;
+}
+
+#download>a {
+    color: #fc9916;
+    padding: 3%;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+#download {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-around;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    background-color: white;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.category>div {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 3%;
+    justify-content: space-between;
+    margin: 1px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.category>div:hover {
+    cursor: pointer;
+}
+
+#catcont {
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+.caticon {
+    width: 40px;
+    height: 40px;
+}
+
+.name {
+    font-size: 12px;
+    color: #02475b;
+    margin: 0px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.description {
+    font-size: 12px;
+    color: #02475b99;
+    margin: 4px;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-bottom: 5%;
+}
+
+.below {
+    font-size: 10px;
+    color: #02475b;
+    margin: 0px;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding-top: 5%;
+    border-top: 1px solid #007c93;
+}
+
+#catcont>h2 {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    padding-bottom: 1%;
+    border-bottom: 2px solid #007c93;
+    color: #02475B;
+    width: 67%;
+}
+
+.textcont {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.textcont>h3 {
+    color: #02475B;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.pointers {
+    font-family: sans-serif;
+    line-height: 200%;
+    display: block;
+    text-align: justify;
+}
+
+.pointers>li {
+    display: block;
+}
+
+.textcont>p {
+    font-family: sans-serif;
+    line-height: 150%;
+}
+
+li>a {
+    color: #02475B;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0px;
+}
+
+#dropdowncont {
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    padding: 10px 0px;
+}
+
+#dropdowncont>h1 {
+    color: #02475B;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+    border-bottom: 1px solid #02475B;
+    padding-bottom: 15px;
+}
+
+.question {
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-bottom: 1px solid #007c93;
+    width: 100%;
+    color: #02475B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.active,
+.question:hover {
+    cursor: pointer;
+}
+
+.answers {
+    width: 99%;
+    padding: 0 5px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border-bottom: 1px solid #01475b;
+    text-align: justify;
+    line-height: 150%;
+    font-family: sans-serif;
+}
+
+.answers>p {
+    width: 80%;
+    padding: 10px;
+    color: #02475B;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.question:after {
+    content: 'V';
+    font-size: 16px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\0245";
+}
+
+
+/* footer css styles */
+
+.containerfooter {
+    width: 75%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top: 20px;
+}
+
+.bottomlink {
+    width: 100%;
+    display: flex;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    background-color: #020d11;
+}
+
+.logo {
+    max-width: 105px;
+    margin: auto;
+}
+
+.footerlink {
+    width: 100%;
+    text-align: left;
+    font-family: IBM Plex Sans, sans-serif;
+}
+
+.footerlink h1 {
+    color: #fdb516;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+#list {
+    color: #fff;
+    padding: 0px;
+    font-size: 13px;
+    line-height: 27px;
+    padding-bottom: 20px;
+}
+
+#list li {
+    margin: 0px 20px 0px 10px;
+    display: inline-block;
+    position: relative;
+}
+
+#list li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.line {
+    display: none;
+}
+
+@media all and (max-width:1250px) {
+    .body {
+        width: 90%;
+    }
+    .top {
+        width: 68%;
+    }
+    .right {
+        width: 40%;
+    }
+    .left {
+        width: 60%;
+    }
+    #top-Specialities {
+        display: block;
+        box-sizing: content-box;
+    }
+    #specialties {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 30px;
+    }
+    #specialties>div {
+        width: 60%;
+        height: 100%;
+    }
+    #catcont {
+        margin-top: 300px;
+    }
+    #locations {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    #locatitons>a {
+        width: 20%;
+    }
+    .bottomlink {
+        width: 93%;
+        margin: auto;
+        margin-top: 0px;
+    }
+}
+
+@media all and (max-width:1150px) {
+    .container {
+        width: 70%;
+    }
+    .left {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+    .top {
+        width: 64%;
+    }
+    #locations {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+    #top-Specialities {
+        display: block;
+        box-sizing: content-box;
+    }
+    #specialties {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-around;
+    }
+    #specialties>div {
+        width: 100%;
+        height: 100%;
+    }
+    #catcont {
+        margin-top: 50px;
+    }
+    .bottomlink {
+        width: 87%;
+        margin: auto;
+        margin-top: 0px;
+    }
+}
+
+@media all and (max-width:1000px) {
+    .inner {
+        display: none;
+    }
+    .second {
+        display: none;
+    }
+    .body {
+        width: 46%;
+        margin: auto;
+    }
+    .header {
+        width: 55%;
+    }
+    .headerlink {
+        background-color: white;
+        min-width: 295%;
+    }
+    .bottomlink {
+        width: 83%;
+        margin: auto;
+        margin-top: 0px;
+    }
+    #locations {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    #locations>a {
+        padding: 10px;
+    }
+    #catcont {
+        margin-top: 120px;
+    }
+}
+
+@media all and (max-width:850px) {
+    .inner {
+        display: none;
+    }
+    .second {
+        display: none;
+    }
+    .body {
+        width: 36%;
+        margin: auto;
+    }
+    .header {
+        width: 40%;
+    }
+    .body {
+        width: 65%;
+    }
+    .top {
+        width: 80%;
+    }
+    .headerlink {
+        background-color: white;
+        min-width: 365%;
+    }
+    .bottomlink {
+        width: 100%;
+        margin: auto;
+        margin-top: 0px;
+    }
+    #locations {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    #locations>a {
+        padding: 10px;
+    }
+    #top-Specialities {
+        display: block;
+        box-sizing: content-box;
+    }
+    #specialties {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-around;
+    }
+    #specialties>div {
+        width: 100%;
+        height: 100%;
+    }
+    .containerfooter {
+        width: 85%;
+    }
+    .category {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+}
+
+@media all and (max-width:600px) {
+    .inner {
+        display: none;
+    }
+    .second {
+        display: none;
+    }
+    .body {
+        width: 36%;
+        margin: auto;
+    }
+    .header {
+        width: 40%;
+    }
+    .body {
+        width: 93%;
+    }
+    .top {
+        width: 93%;
+    }
+    .left {
+        width: 90%;
+    }
+    #doctorconsult {
+        width: 100%;
+        padding: 20px;
+    }
+    #image250 {
+        width: 110%;
+    }
+    #rs250 {
+        width: 100%;
+    }
+    #catcont {
+        margin-top: 400px;
+    }
+    .headerlink {
+        background-color: white;
+        min-width: 265%;
+    }
+    .bottomlink {
+        width: 100%;
+        margin: auto;
+        margin-top: 0px;
+    }
+    .containerfooter {
+        width: 95%;
+    }
+    #locations {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    #locations>a {
+        padding: 10px;
+    }
+    #top-Specialities {
+        display: block;
+        box-sizing: content-box;
+    }
+    #specialties {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+    }
+    #specialties>div {
+        width: 100%;
+        height: 100%;
+    }
+    .category {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media all and (max-width:400px) {
+    .inner {
+        display: none;
+    }
+    .second {
+        display: none;
+    }
+    .body {
+        width: 36%;
+        margin: auto;
+    }
+    .header {
+        width: 50%;
+    }
+    .body {
+        width: 100%;
+    }
+    .top {
+        width: 100%;
+    }
+    .left {
+        width: 90%;
+    }
+    #doctorconsult {
+        width: 100%;
+        padding: 20px;
+    }
+    #image250 {
+        width: 110%;
+    }
+    #rs250 {
+        width: 100%;
+    }
+    #catcont {
+        margin-top: 400px;
+    }
+    .headerlink {
+        background-color: white;
+        min-width: 185%;
+    }
+    .bottomlink {
+        width: 100%;
+        margin: auto;
+        margin-top: 0px;
+    }
+    .containerfooter {
+        width: 95%;
+    }
+    #locations {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    #locations>a {
+        padding: 10px;
+    }
+    #top-Specialities {
+        display: block;
+        box-sizing: content-box;
+    }
+    #specialties {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+    }
+    #specialties>div {
+        width: 100%;
+        height: 100%;
+    }
+    .category {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .textcont {
+        width: 90%;
+    }
+}
+
+@media all and (max-width:300px) {
+    .container {
+        width: 70%;
+        margin: 0px;
+        background-color: white;
+    }
+    .body {
+        background-color: white;
+        margin-left: 0px;
+    }
+    .headerlink {
+        width: 50%;
+    }
+    .top {
+        width: 100%;
+    }
+    #catcont {
+        margin-top: 600px;
+    }
+    .left {
+        margin-left: 0px;
+    }
+    #doctorconsult {
+        margin-left: 0px;
+        padding: 10px;
+        /* width: 100%; */
+    }
+    #locations {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #img {
+        margin: 0px;
+    }
+    #searchbar {
+        width: 80%;
+    }
+    input {
+        font-size: 5px;
+        width: 60%;
+    }
+}
