@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat:ital,wght@0,100;0,400;1,200&family=Poppins:wght@100;200;300&display=swap');
+body{
+    width:max-content;
+    margin: auto;
+    background-color:#F3F3F3;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+.main{
+    width: 1240px;
+    background-color:#F7F8F5;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+}
+.top{
+    width: 1240px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    box-shadow:10px 5px 5px grey ;
+
+}
+.tables{
+    width: 400px;
+    background-color:white;
+    margin-left:600px;
+}
+.mycart{
+    width: 671px;
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+    gap:10px;
+    box-shadow: 10px 5px 5px grey;
+    background-color:#F7F8F5;
+
+
+}
+.mycart>div{
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    padding:30px;
+    border-radius:10px;
+}
+
+.mycart>div img{
+    width: 50px;
+    height: 50px;
+}
+.ProductName{
+    width:90%;
+    color:#024752;
+    font-size:16px;
+   
+}
+.qtycontainer{
+    display: flex;
+
+}
+.Strikes{
+    display: flex;
+}
+.Strikes>.Symbols{
+    
+    color:#4e808d;
+    font-size:11px;
+}
+.Discounts{
+    margin-top:11px;
+    color:#4e808d;
+    font-size:11px;
+}
+.PriceDiv{
+    display: flex;
+}
+
+.Price{
+    margin-left:500px;
+    margin-top:50px;
+    color: orange;
+    
+}
+.optional{
+    width: 671px;
+    box-shadow: 10px 5px 5px grey;
+}
+.right{
+    display: flex;
+
+}
+.rightright{
+    margin-left:70px;
+    margin-top: -20px;
+    width: 500px;
+    box-shadow:10px 5px 5px grey ;
+
+   
+}
+.payment{
+    margin-top:10px;
+}
+.rightt{
+    width:490px;
+}
+.totalcharges{
+    display: inline;
+}
+hr{
+    width: 660px;
+    margin-left:10px;
+    color:lightgrey;
+}
+
+.products{
+    display:flex;
+    justify-content: space-evenly;
+    margin-right:620px;
+}
+.product{
+    width: 100px;
+    height: 180px;
+    background-color: white;
+    box-shadow: 10px 5px 5px grey;
+}
+button{
+    color: orange;
+    border:0;
+    border-radius:10px;
+}
+.tables2{
+    margin-top:50px;
+    width: 1242px;
+    height: 200px;
+    color: white;
+    background-color: black;
+}
+.topfoot{
+    font-size:20px;
+    font-weight: bold;
+}
+.topfeet{
+    color:blue;
+    font-weight: bold;
+}
+.mediumfeet{
+    font-size:smaller;
+}
+.product>img{
+    width: 100px;
+    height: 100px;
+}
+.product>p{
+    font-size:10px;
+}
